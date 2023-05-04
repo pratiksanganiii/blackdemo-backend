@@ -5,9 +5,15 @@ const chatSchema = new Schema(
     from: {
       type: Types.ObjectId,
       required: true,
+      ref: "User",
     },
     to: {
       type: Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
+    message: {
+      type: String,
       required: true,
     },
   },
